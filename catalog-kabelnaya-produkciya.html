@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кабельная продукция — Каталог ОСТ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-black:#0F1B2D;
+  --steel-blue:#1C3452;
+  --steel-gray:#3D5A73;
+  --light-steel:#C4CDD5;
+  --off-white:#EEF1F3;
+  --paper:#F7F8F9;
+  --amber:#F0A202;
+  --amber-dark:#C97E00;
+  --white:#FFFFFF;
+  --line:#D7DCE1;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter', sans-serif;
+  color:var(--navy-black);
+  background:var(--paper);
+  line-height:1.5;
+}
+h1,h2,h3,.disp{
+  font-family:'Oswald', sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.02em;
+  font-weight:600;
+  color:var(--navy-black);
+}
+.mono{ font-family:'JetBrains Mono', monospace; }
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; display:block; }
+.wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+@media (max-width:700px){ .wrap{ padding:0 20px; } }
+
+/* Signature I-beam divider motif */
+.beam-divider{ display:flex; align-items:center; gap:14px; margin:0 0 28px 0; }
+.beam-divider svg{ flex-shrink:0; }
+.beam-divider .eyebrow{
+  font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--steel-gray);
+}
+.beam-divider .rule{ flex:1; height:1px; background:var(--line); }
+
+/* HEADER */
+header{ position:sticky; top:0; z-index:50; background:var(--navy-black); border-bottom:1px solid rgba(255,255,255,0.08); }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding:16px 0; }
+.logo{ display:flex; align-items:center; gap:10px; color:var(--white); font-family:'Oswald', sans-serif; font-size:20px; font-weight:700; letter-spacing:0.03em; }
+.logo .mark{ width:30px; height:30px; }
+nav{ display:flex; gap:28px; }
+nav a{ color:var(--light-steel); font-size:14px; font-weight:500; letter-spacing:0.02em; transition:color .15s; }
+nav a:hover, nav a.active{ color:var(--amber); }
+.header-cta{ display:flex; align-items:center; gap:20px; }
+.phone{ color:var(--white); font-family:'JetBrains Mono', monospace; font-size:14px; }
+.btn{
+  display:inline-block; background:var(--amber); color:var(--navy-black);
+  font-family:'Oswald', sans-serif; font-weight:600; text-transform:uppercase;
+  letter-spacing:0.03em; font-size:13px; padding:12px 22px; border:none; cursor:pointer;
+  transition:background .15s, transform .1s;
+}
+.btn:hover{ background:var(--amber-dark); }
+.btn:active{ transform:translateY(1px); }
+.btn-outline{ background:transparent; color:var(--white); border:1px solid rgba(255,255,255,0.3); }
+.btn-outline:hover{ border-color:var(--amber); color:var(--amber); background:transparent; }
+@media (max-width:900px){ nav{ display:none; } .phone{ display:none; } }
+
+/* PAGE HERO (inner pages) */
+.page-hero{
+  background:linear-gradient(135deg, var(--navy-black) 0%, var(--steel-blue) 100%);
+  color:var(--white); padding:64px 0 56px;
+}
+.page-hero .eyebrow{ font-family:'JetBrains Mono', monospace; color:var(--amber); font-size:13px; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:14px; display:block; }
+.page-hero h1{ color:var(--white); font-size:38px; margin-bottom:14px; }
+.page-hero p{ color:var(--light-steel); max-width:600px; font-size:15.5px; }
+.breadcrumb{ font-size:12.5px; color:var(--light-steel); margin-bottom:18px; font-family:'JetBrains Mono', monospace; }
+.breadcrumb a{ color:var(--light-steel); } .breadcrumb a:hover{ color:var(--amber); }
+
+/* HERO (home) */
+.hero{ background:linear-gradient(135deg, var(--navy-black) 0%, var(--steel-blue) 100%); color:var(--white); padding:96px 0 110px; position:relative; overflow:hidden; }
+.hero::after{ content:""; position:absolute; right:-120px; top:-60px; width:520px; height:520px; background:radial-gradient(circle, rgba(240,162,2,0.10) 0%, transparent 70%); }
+.hero-inner{ position:relative; z-index:2; max-width:760px; }
+.hero .eyebrow{ font-family:'JetBrains Mono', monospace; color:var(--amber); font-size:13px; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:18px; display:block; }
+.hero h1{ font-size:52px; line-height:1.08; color:var(--white); margin-bottom:22px; }
+.hero h1 em{ font-style:normal; color:var(--amber); }
+.hero p{ font-size:17px; color:var(--light-steel); max-width:560px; margin-bottom:36px; }
+.hero-actions{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:56px; }
+.hero-stats{ display:grid; grid-template-columns:repeat(4,auto); gap:40px; border-top:1px solid rgba(255,255,255,0.12); padding-top:28px; }
+.hero-stats .num{ font-family:'Oswald', sans-serif; font-size:30px; color:var(--amber); font-weight:700; }
+.hero-stats .label{ font-size:12px; color:var(--light-steel); text-transform:uppercase; letter-spacing:0.05em; }
+@media (max-width:700px){ .hero{ padding:64px 0 72px; } .hero h1{ font-size:34px; } .hero-stats{ grid-template-columns:repeat(2,auto); row-gap:24px; } }
+
+section{ padding:88px 0; }
+@media (max-width:700px){ section{ padding:56px 0; } }
+.section-head{ max-width:640px; margin-bottom:48px; }
+.section-head h2{ font-size:32px; margin-bottom:14px; }
+.section-head p{ color:var(--steel-gray); font-size:15.5px; }
+
+/* CATALOG GRID */
+.cat-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+@media (max-width:900px){ .cat-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .cat-grid{ grid-template-columns:1fr; } }
+.cat-card{ background:var(--white); padding:30px 26px; transition:background .15s; }
+.cat-card:hover{ background:var(--off-white); }
+.cat-card .idx{ font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--amber-dark); margin-bottom:14px; display:block; }
+.cat-card h3{ font-size:17px; margin-bottom:10px; }
+.cat-card p{ font-size:13.5px; color:var(--steel-gray); }
+.cat-card .spec{ margin-top:14px; font-size:12px; color:var(--steel-gray); font-family:'JetBrains Mono', monospace; }
+
+/* ABOUT split */
+.about-split{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+@media (max-width:800px){ .about-split{ grid-template-columns:1fr; gap:36px; } }
+.about-split h2{ font-size:30px; margin-bottom:18px; }
+.about-split p{ color:var(--steel-gray); font-size:15.5px; margin-bottom:16px; }
+.about-panel{ background:var(--navy-black); color:var(--white); padding:36px; }
+.about-panel .row{ display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid rgba(255,255,255,0.1); }
+.about-panel .row:last-child{ border-bottom:none; }
+.about-panel .row .label{ color:var(--light-steel); font-size:14px; }
+.about-panel .row .val{ font-family:'Oswald', sans-serif; color:var(--amber); font-weight:600; }
+
+/* TIMELINE (company page) */
+.timeline{ border-left:2px solid var(--line); padding-left:32px; }
+.timeline-item{ position:relative; padding-bottom:36px; }
+.timeline-item:last-child{ padding-bottom:0; }
+.timeline-item::before{ content:""; position:absolute; left:-38px; top:4px; width:12px; height:12px; background:var(--amber); }
+.timeline-item .yr{ font-family:'JetBrains Mono', monospace; color:var(--amber-dark); font-size:13px; margin-bottom:6px; display:block; }
+.timeline-item h3{ font-size:16px; margin-bottom:6px; }
+.timeline-item p{ color:var(--steel-gray); font-size:14px; }
+
+/* SERVICES */
+.services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+@media (max-width:900px){ .services-grid{ grid-template-columns:1fr; } }
+.service-card{ border:1px solid var(--line); background:var(--white); padding:32px 28px; }
+.service-card svg{ margin-bottom:20px; }
+.service-card h3{ font-size:18px; margin-bottom:12px; }
+.service-card p{ color:var(--steel-gray); font-size:14.5px; margin-bottom:18px; }
+.service-card a{ font-size:13px; color:var(--amber-dark); font-weight:600; }
+.service-list-row{ display:grid; grid-template-columns:44px 1fr; gap:20px; padding:26px 0; border-bottom:1px solid var(--line); }
+.service-list-row .n{ font-family:'JetBrains Mono', monospace; color:var(--amber-dark); font-size:14px; }
+.service-list-row h3{ font-size:17px; margin-bottom:8px; }
+.service-list-row p{ color:var(--steel-gray); font-size:14px; }
+
+/* PRINCIPLES dark band */
+.principles{ background:var(--steel-blue); color:var(--white); }
+.principles .section-head p{ color:var(--light-steel); }
+.principles .section-head h2{ color:var(--white); }
+.princ-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,0.12); }
+@media (max-width:900px){ .princ-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .princ-grid{ grid-template-columns:1fr; } }
+.princ-card{ background:var(--steel-blue); padding:28px 24px; }
+.princ-card .n{ font-family:'JetBrains Mono', monospace; color:var(--amber); font-size:13px; margin-bottom:12px; display:block; }
+.princ-card h3{ color:var(--white); font-size:16px; margin-bottom:10px; }
+.princ-card p{ color:var(--light-steel); font-size:13.5px; }
+
+/* PROJECTS */
+.proj-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:28px; }
+@media (max-width:800px){ .proj-grid{ grid-template-columns:1fr; } }
+.proj-card{ background:var(--white); border:1px solid var(--line); }
+.proj-media{ height:180px; background:linear-gradient(135deg, var(--steel-blue), var(--navy-black)); position:relative; }
+.proj-media .tag{ position:absolute; top:16px; left:16px; background:var(--amber); color:var(--navy-black); font-family:'JetBrains Mono', monospace; font-size:11px; padding:5px 10px; text-transform:uppercase; letter-spacing:0.05em; }
+.proj-body{ padding:24px 26px; }
+.proj-body h3{ font-size:17px; margin-bottom:10px; }
+.proj-body p{ font-size:14px; color:var(--steel-gray); }
+
+/* SOLUTIONS (industries) */
+.sol-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+@media (max-width:900px){ .sol-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .sol-grid{ grid-template-columns:1fr; } }
+.sol-card{ background:var(--white); padding:30px 26px; }
+.sol-card h3{ font-size:16px; margin-bottom:10px; }
+.sol-card p{ color:var(--steel-gray); font-size:13.5px; }
+
+/* CONTACTS page */
+.contact-grid{ display:grid; grid-template-columns:1.1fr 1fr; gap:56px; }
+@media (max-width:800px){ .contact-grid{ grid-template-columns:1fr; } }
+.contact-info-row{ display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--line); }
+.contact-info-row .label{ width:120px; flex-shrink:0; font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--steel-gray); font-family:'JetBrains Mono', monospace; }
+.contact-info-row .val{ font-size:15px; }
+.map-block{ height:260px; background:repeating-linear-gradient(135deg, var(--off-white), var(--off-white) 10px, var(--line) 10px, var(--line) 11px); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--steel-gray); font-family:'JetBrains Mono', monospace; font-size:13px; margin-top:24px; }
+
+/* CTA / FORM */
+.cta-band{ background:var(--navy-black); color:var(--white); }
+.cta-inner{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+@media (max-width:800px){ .cta-inner{ grid-template-columns:1fr; gap:32px; } }
+.cta-inner h2{ color:var(--white); font-size:30px; margin-bottom:16px; }
+.cta-inner p{ color:var(--light-steel); font-size:15px; }
+.form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media (max-width:500px){ .form-grid{ grid-template-columns:1fr; } }
+.form-grid input, .form-grid select, .form-grid textarea{
+  grid-column:span 1; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.18);
+  color:var(--white); padding:14px 16px; font-family:'Inter', sans-serif; font-size:14px;
+}
+.form-grid textarea{ resize:vertical; min-height:90px; }
+.form-grid input::placeholder, .form-grid textarea::placeholder{ color:var(--light-steel); }
+.form-grid input:focus, .form-grid textarea:focus{ outline:2px solid var(--amber); outline-offset:1px; }
+.form-full{ grid-column:1 / -1; }
+.form-note{ font-size:12.5px; color:var(--steel-gray); margin-top:14px; }
+.form-note a{ color:var(--light-steel); text-decoration:underline; }
+
+footer{ background:var(--navy-black); border-top:1px solid rgba(255,255,255,0.08); color:var(--light-steel); padding:40px 0; font-size:13.5px; }
+.footer-inner{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+.footer-inner a{ color:var(--light-steel); }
+.footer-inner a:hover{ color:var(--amber); }
+
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ transition:none !important; } }
+
+
+.subcat-block{ margin-bottom:44px; }
+.subcat-block:last-child{ margin-bottom:0; }
+.subcat-block h3{
+  font-size:18px; margin-bottom:20px; padding-bottom:10px;
+  border-bottom:2px solid var(--amber); display:inline-block;
+}
+.product-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width:900px){ .product-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .product-grid{ grid-template-columns:1fr; } }
+.product-card{ border:1px solid var(--line); background:var(--white); padding:20px; }
+.product-card h4{ font-size:14.5px; margin-bottom:8px; text-transform:none; letter-spacing:0; font-family:'Inter',sans-serif; font-weight:600; color:var(--navy-black); }
+.product-card .spec{ font-size:12.5px; color:var(--steel-gray); margin-bottom:16px; min-height:32px; }
+.product-card .price{ font-family:'JetBrains Mono', monospace; color:var(--amber-dark); font-weight:600; font-size:15px; }
+.product-card .price small{ color:var(--steel-gray); font-weight:400; font-size:11px; text-transform:none; }
+.cat-nav{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:48px; }
+.cat-nav a{
+  font-size:12.5px; padding:8px 14px; border:1px solid var(--line); color:var(--steel-gray);
+  font-family:'JetBrains Mono', monospace;
+}
+.cat-nav a.active, .cat-nav a:hover{ background:var(--navy-black); color:var(--white); border-color:var(--navy-black); }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 30 30" fill="none"><rect x="4" y="4" width="22" height="4" fill="#F0A202"/><rect x="13" y="4" width="4" height="22" fill="#F0A202"/><rect x="4" y="22" width="22" height="4" fill="#F0A202"/></svg>
+      ОСТ
+    </a>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html" class="active">Каталог</a>
+      <a href="company.html">Компания</a>
+      <a href="services.html">Услуги</a>
+      <a href="solutions.html">Решения</a>
+      <a href="projects.html">Проекты</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="header-cta">
+      <span class="phone">+7 900 000-00-00</span>
+      <a href="contacts.html" class="btn">Заказать расчёт</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / Кабельная продукция</div>
+    <span class="eyebrow">Силовые и информационные кабели</span>
+    <h1>Кабельная продукция</h1>
+    <p>Широкий ассортимент кабелей и проводов для промышленного и бытового применения, соответствующих актуальным стандартам безопасности.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cat-nav">
+      <a href="catalog.html">Все категории</a>
+      <a href="catalog-metallokonstrukcii.html">Металлоконструкции</a>
+      <a href="catalog-sendvich-paneli.html">Сэндвич-панели</a>
+      <a href="catalog-metalloprokat.html">Металлопрокат</a>
+      <a href="catalog-zhbi-izdeliya.html">ЖБИ изделия</a>
+      <a href="catalog-uteplitel.html">Утеплитель</a>
+      <a href="catalog-otdelochnye-materialy.html">Отделочные материалы</a>
+      <a href="catalog-napolnye-pokrytiya.html">Напольные покрытия</a>
+      <a href="catalog-krovelnye-fasadnye-materialy.html">Кровельные и фасадные материалы</a>
+      <a href="catalog-pilomaterialy.html">Пиломатериалы</a>
+      <a href="catalog-santekhnika.html">Сантехника</a>
+      <a href="catalog-svetoprozrachnye-konstrukcii.html">Светопрозрачные конструкции</a>
+      <a href="catalog-sypuchie-materialy.html">Сыпучие материалы</a>
+      <a href="catalog-truby-soedinitelnye-detali.html">Трубы и соединительные детали</a>
+      <a href="catalog-kabelnaya-produkciya.html" class="active">Кабельная продукция</a>
+      <a href="catalog-elektrooborudovanie.html">Электрооборудование</a>
+      <a href="catalog-materialy-blagoustrojstva.html">Материалы для благоустройства</a>
+    </div>
+    <div class="subcat-block">
+        <h3>Силовые и контрольные кабели</h3>
+        <div class="product-grid">
+        <div class="product-card">
+          <h4>Кабель силовой ВВГнг-LS</h4>
+          <div class="spec">сечение 3×1.5–3×240</div>
+          <div class="price">от 85 ₽/м</div>
+        </div><div class="product-card">
+          <h4>Кабель контрольный КВВГ</h4>
+          <div class="spec">многожильный</div>
+          <div class="price">от 62 ₽/м</div>
+        </div>
+        </div>
+      </div>
+<div class="subcat-block">
+        <h3>Информационные кабели</h3>
+        <div class="product-grid">
+        <div class="product-card">
+          <h4>Кабель информационный UTP cat.5e</h4>
+          <div class="spec">внутренний / внешний</div>
+          <div class="price">от 18 ₽/м</div>
+        </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-inner">
+    <div>
+      <h2>Нужна точная цена по проекту?</h2>
+      <p>Пришлите спецификацию или список позиций из раздела «Кабельная продукция» — рассчитаем стоимость с доставкой за 24 часа.</p>
+    </div>
+    <form class="form-grid" onsubmit="return false;">
+      <input type="text" placeholder="Имя">
+      <input type="tel" placeholder="Телефон">
+      <input type="text" placeholder="Что нужно поставить" class="form-full">
+      <button type="submit" class="btn form-full">Отправить заявку</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>ОСТ © 2016–2026</span>
+    <span>zakaz@ost.ru · +7 900 000-00-00</span>
+    <a href="contacts.html">Контакты</a>
+  </div>
+</footer>
+
+</body>
+</html>
